@@ -2,32 +2,38 @@ export const CultureCommunityDAO = [
   {
     "Name": "Friends With Benefits Pro",
     "Description": "FWB is a restricted creators/thinkers club that contemplates and organizes to enhance diverse crypto culture and the creative class. It acts on ideation, community-building, digital art gallery and more.",
-    "Website": "https://www.fwb.help/"
+    "Website": "https://www.fwb.help/",
+    "category": 'CultureCommunityDAO'
   },
   {
     "Name": "Crypto, Culture & Society",
     "Description": "Reading and discussion group exploring the impact of crypto on culture and society.  Maybe, \"Crypto, Culture, & Society\" is an appropriate name. Open sourcing and funding reasearch.Mirror's Token Race",
-    "Website": ""
+    "Website": "",
+    "category": 'CultureCommunityDAO'
   },
   {
     "Name": "\nFiatLuxDAO",
     "Description": "FiatLux features a group of UC Berkeley alumni who aim to nurture the value of science in culture through web3 tools, particularly NFTs.",
-    "Website": "https://foundation.app/@FiatLuxDAO"
+    "Website": "https://foundation.app/@FiatLuxDAO",
+    "category": 'CultureCommunityDAO'
   },
   {
     "Name": "MidsummerDAO",
     "Description": "http://midsummer.party/\t\t\t\tCommunity-owned storytelling / film production + distribution\tsummer, 2021\t\tJoin the discord",
-    "Website": ""
+    "Website": "",
+    "category": 'CultureCommunityDAO'
   },
   {
     "Name": "SporkDAO",
     "Description": "https://sporkdao.org \t\t\t\tETHDenver Becoming the First ever Decentralized Festival of its size\t\tCommunity Rewards\tHave some amount of SPORK to participate in governance\t\tSnapshot (moloch DAOs)\tStill figuring this out\tDAOhaus, Snapshot, Discord, Discourse, etc.",
-    "Website": ""
+    "Website": "",
+    "category": 'CultureCommunityDAO'
   },
   {
     "Name": "ampled",
     "Description": "Co-op community support platform for musicians — 100% collectively owned by artists & worker",
-    "Website": "https://twitter.com/joinbuild_\thttps://discord.gg/XrxbdcCvn5\thttps://buildcities.com/"
+    "Website": "https://twitter.com/joinbuild_\thttps://discord.gg/XrxbdcCvn5\thttps://buildcities.com/",
+    "category": 'CultureCommunityDAO'
   }
  ]
 

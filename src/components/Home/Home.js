@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import userProfileData from '../../fakeData';
 import blockchainImg from '../../img/istock-680381152zapp2photo.jpg';
-
+import logo from '../../img/flc_design2022040917829.png'
+import gameIcon from '../../img/Google_Play_Games_icon.png'
 import './Home.css';
 import ResultContent from './../ResultContent/ResultContent';
 
@@ -27,8 +27,11 @@ const Home = () => {
   return (
     <div>
       <div className='container'>
+        
         <div className='text-center mt-5'>
-          <h2 className='title'>Discover DAOs Network</h2>
+          <img width={140} src={logo} alt=""/>
+
+          <h2 className='title mt-4'>Discover DAO Network</h2>
           <div className=' mt-4'>
             <form  className='search-container' onSubmit={handleSubmit}>
               <input type="text" name='search' placeholder="Search....." className="form-control shadow-none searchInput"  />
@@ -39,13 +42,16 @@ const Home = () => {
             <a href="/searchByCategory">DAO search by category</a>
             <a href="/DAOsocialGraphSearch">DAO social graph search</a>
             <a href="/latestPostOfDAO">See latest post of DAO</a>
+            <a href="">
+              <img width={30} src={gameIcon} alt=""/>
+            </a>
           </div>
           <div className='mt-5 Dao-text'>
-            <h5>Dexpo is a social network/search engine for DAO built on the blockchain. <br/>
+            <h5>DAO Search is a social network/search engine for DAO built on the blockchain. <br/>
               Search and explore it's posts, people and connections.
             </h5>
           </div>
-          <div className='mt-5 mb-5'>
+          <div className='mt-5 mb-5 blockchainImg'>
             <img width='300px' src={blockchainImg} alt=""/>
           </div>
           <div id='results-content'>

@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar,faUser, faFolder, faUsers, faLaptop, faSearch } from '@fortawesome/free-solid-svg-icons';
 import SearchUsers from '../SearchUsers/SearchUsers';
 import UserDetails from '../UserDetails/UserDetails';
+import logo from '../../img/flc_design2022040917829.png'
 
 
 const drawerWidth = 350;
@@ -35,7 +36,9 @@ const DAOsocialGraphSearch = (props) => {
 
   const drawer = (
     <div className='nastedRoute-container'>
-      <h2 className='mt-3 mb-3'>DAO Expo</h2>
+      <h6 className=' mb-3'>
+        <img width={120} src={logo} alt=""/>
+         </h6>
 
       <div className='ml-5 mt-4'>
         <div className='mb-4'>

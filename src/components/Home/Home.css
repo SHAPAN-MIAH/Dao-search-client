@@ -6,7 +6,7 @@
   display: flex;
 }
 .title{
-  color: rgb(0, 159, 227);
+  color: rgb(24 15 119);
 }
 .searchInput{
   width: 650px;
@@ -19,15 +19,15 @@
 .search-container button{
   position: absolute;
   margin-left: 835px;
-  background-color: rgb(0, 159, 227);
-  border: 1px solid rgb(0, 159, 227);
+  background-color: rgb(24 15 119);
+  border: 1px solid rgb(24 15 119);
   padding: 10px 40px;
   color: rgb(255, 255, 255);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 .search-container button:hover{
-  background-color: rgb(0, 148, 212);
+  background-color: rgb(38, 28, 147);
 }
 
 .another-search-link {
@@ -35,18 +35,21 @@
 }
 .another-search-link a {
   text-decoration: none;
-  color: rgb(80, 80, 80);
+  color: rgb(124, 16, 50);
   margin: 0px 10px;
   font-size: 14px;
   font-weight: 500;
 }
 .another-search-link a:hover {
-  color: rgb(0, 159, 227);
+  color: rgb(24 15 119);
 }
 
 .Dao-text{
-  color: rgb(0, 159, 227);
+  color: rgb(24 15 119);
 }
 .Dao-text h5{
   font-weight: 500;
+}
+.blockchainImg img{
+  border-radius: 5px;
 }
