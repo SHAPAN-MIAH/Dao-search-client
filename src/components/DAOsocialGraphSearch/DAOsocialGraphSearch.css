@@ -9,7 +9,7 @@
 .Expand{
   /* text-align: end; */
   font-size: 14px;
-  color: #1976d2;
+  color: rgb(24 15 119);
   font-weight: 600;
   margin: 20px 0px;
   cursor: pointer;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 .filter-option:hover{
-  color: #1976d2;
+  color: rgb(24 15 119);
 }
 .filter-option p{
   margin-left: 10px;
@@ -36,18 +36,18 @@
 .applyFilter button{
   padding: 7px 15px;
   border: none;
-  background-color: #1976d2;
+  background-color: rgb(24 15 119);
   color: rgb(255, 255, 255);
   font-size: 14px;
   border-radius: 30px;
 }
 .applyFilter button:hover{
-  background-color: #2286eb;
+  background-color: rgb(24 15 119);
 }
 .applyFilter span{
   margin-left: auto;
   margin-top: 8px;
-  color: #1976d2;
+  color: rgb(24 15 119);
   font-weight: 500;
   cursor: pointer;
 }
@@ -70,13 +70,13 @@
 }
 .DAOsocialGraphSearch-InputContainer button{
   position: absolute;
-  background-color: rgb(0, 159, 227);
-  border: 1px solid rgb(0, 159, 227);
+  background-color: rgb(24 15 119);
+  border: 1px solid rgb(24 15 119);
   padding: 8px 40px;
   color: rgb(255, 255, 255);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 .DAOsocialGraphSearch-InputContainer button:hover{
-  background-color: rgb(0, 148, 212);
+  background-color: rgb(24 15 119);
 }
