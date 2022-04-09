@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from "./components/Home/Home";
+import DAOSearchByCategory from './components/DAOSearchByCategory/DAOSearchByCategory';
+import SeeLatestPostOfDAO from './components/SeeLatestPostOfDAO/SeeLatestPostOfDAO';
+import DAOsocialGraphSearch from "./components/DAOsocialGraphSearch/DAOsocialGraphSearch";
+import UserDetails from "./components/UserDetails/UserDetails";
+// import DAOsocialGraphSearch from './components/DAOsocialGraphSearch/DAOsocialGraphSearch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="searchByCategory" element={<DAOSearchByCategory />} />
+        <Route path="latestPostOfDAO" element={<SeeLatestPostOfDAO />} />
+        <Route path="DAOsocialGraphSearch/*" element={<DAOsocialGraphSearch />} >
+          <Route path='users' element={<p>this is users</p>}></Route>
+          <Route path='userDetails/:id' element={<p>this is user details</p>}></Route>
+        </Route>
+      </Routes> */}
+
+      <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route path="/searchByCategory">
+              <DAOSearchByCategory/>
+            </Route>
+            <Route path="/latestPostOfDAO">
+              <SeeLatestPostOfDAO/>
+            </Route>
+            <Route path="/DAOsocialGraphSearch">
+              <DAOsocialGraphSearch/>
+            </Route>
+            <Route path="/user/:id">
+              <UserDetails />
+            </Route>
+          </Switch>
+      </Router>
     </div>
   );
 }
