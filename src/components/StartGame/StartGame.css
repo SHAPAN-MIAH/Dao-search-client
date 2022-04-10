@@ -22,3 +22,9 @@
 .G-options{
   cursor: pointer;
 }
+
+.correctResult{
+  color: rgb(234, 15, 84);
+  font-size: 25px;
+  font-weight: 500;
+}
