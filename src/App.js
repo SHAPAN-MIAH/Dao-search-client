@@ -8,21 +8,12 @@ import DAOSearchByCategory from './components/DAOSearchByCategory/DAOSearchByCat
 import SeeLatestPostOfDAO from './components/SeeLatestPostOfDAO/SeeLatestPostOfDAO';
 import DAOsocialGraphSearch from "./components/DAOsocialGraphSearch/DAOsocialGraphSearch";
 import UserDetails from "./components/UserDetails/UserDetails";
-// import DAOsocialGraphSearch from './components/DAOsocialGraphSearch/DAOsocialGraphSearch';
+import Game from "./components/Game/Game";
+import StartGame from "./components/StartGame/StartGame";
 
 function App() {
   return (
     <div className="App">
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="searchByCategory" element={<DAOSearchByCategory />} />
-        <Route path="latestPostOfDAO" element={<SeeLatestPostOfDAO />} />
-        <Route path="DAOsocialGraphSearch/*" element={<DAOsocialGraphSearch />} >
-          <Route path='users' element={<p>this is users</p>}></Route>
-          <Route path='userDetails/:id' element={<p>this is user details</p>}></Route>
-        </Route>
-      </Routes> */}
-
       <Router>
           <Switch>
             <Route exact path="/">
@@ -39,6 +30,12 @@ function App() {
             </Route>
             <Route path="/user/:id">
               <UserDetails />
+            </Route>
+            <Route path="/game">
+              <Game />
+            </Route>
+            <Route path="/startGame">
+              <StartGame />
             </Route>
           </Switch>
       </Router>

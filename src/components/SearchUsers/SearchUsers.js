@@ -27,10 +27,12 @@ const SearchUsers = () => {
     <div>
       <menu>
         <ul>
-          <li>Top</li>
-          <li>Latest</li>
           <li>Profiles</li>
           <li>Links</li>
+          <li>Latest</li>
+          <li>Top</li>
+          
+          
         </ul>
       </menu>
       {/* <button onClick={handleAddProduct} type=""></button> */}

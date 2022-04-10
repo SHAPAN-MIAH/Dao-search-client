@@ -28,10 +28,10 @@ const Home = () => {
     <div>
       <div className='container'>
         
-        <div className='text-center mt-5'>
-          <img width={140} src={logo} alt=""/>
+        <div className='text-center mt-5 pt-5'>
+          <img width={200} src={logo} alt=""/>
 
-          <h2 className='title mt-4'>Discover DAO Network</h2>
+          <h2 className='title mt-5'>Discover DAO Network</h2>
           <div className=' mt-4'>
             <form  className='search-container' onSubmit={handleSubmit}>
               <input type="text" name='search' placeholder="Search....." className="form-control shadow-none searchInput"  />
@@ -42,7 +42,7 @@ const Home = () => {
             <a href="/searchByCategory">DAO search by category</a>
             <a href="/DAOsocialGraphSearch">DAO social graph search</a>
             <a href="/latestPostOfDAO">See latest post of DAO</a>
-            <a href="">
+            <a href="/game">
               <img width={30} src={gameIcon} alt=""/>
             </a>
           </div>
@@ -51,9 +51,9 @@ const Home = () => {
               Search and explore it's posts, people and connections.
             </h5>
           </div>
-          <div className='mt-5 mb-5 blockchainImg'>
+          {/* <div className='mt-5 mb-5 blockchainImg'>
             <img width='300px' src={blockchainImg} alt=""/>
-          </div>
+          </div> */}
           <div id='results-content'>
             {
               results.map(result => <ResultContent key={result.id} result={result}></ResultContent>)

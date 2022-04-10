@@ -4,18 +4,35 @@ import './DAOSearchByCategory.css'
 
 const DAOSearchByCategory = () => {
   const [query, setQuery] = useState('')
+
   const [searchFilterData, setSearchFilterData] = useState([])
+  const [allData, setAllData] = useState([])
   const [filterData, setFilterData] = useState([])
 
-  const HandleSearch = (e) => {
-    
-  }
-  useEffect(() => {
-    fetch(`http://localhost:5500/userProfiles?q=${query}`)
+  const queryItem = allData.map(item => {
+    return (item.name)
+  });
+
+
+  fetch(`http://localhost:5500/userProfiles`)
     .then((res) => res.json())
-    .then((data) => setSearchFilterData(data));
-  }, [query]);
-  console.log(searchFilterData)
+    .then((data) => {
+      setAllData(data)
+    }
+  );
+
+  const HandleSearch = () => {
+    useEffect(() => {
+      fetch(`http://localhost:5500/userProfile?q=${query}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSearchFilterData(data)
+        setQuery('')
+      });
+    }, []);
+
+  }
+
 
   const FilterDAO  = () => {
     const selectCategory = document.querySelector('.selectCategory');
@@ -109,7 +126,7 @@ const DAOSearchByCategory = () => {
 
           <div>
             <form  className='category-searchInput-container d-flex'>
-              <input type="text" onChange={e => setQuery(e.target.value)} placeholder="Search by category" className="form-control shadow-none category-searchInput"  />
+              <input type="text" onBlur={e => setQuery(e.target.value)} placeholder="Search by category" className="form-control shadow-none category-searchInput"  />
               <button onClick={HandleSearch} type="submit">Search</button>
             </form>
           </div>
@@ -119,6 +136,11 @@ const DAOSearchByCategory = () => {
         <h4 className='text-center'>Results</h4>
         {
           filterData.map(filterItem => <DAOCategoryFilterItem key={filterItem.id} filterItem={filterItem}></DAOCategoryFilterItem>)
+        }
+      </div>
+      <div>
+        {
+          searchFilterData.map(searchItem => <li>{searchItem.name}</li>)
         }
       </div>
     </div>

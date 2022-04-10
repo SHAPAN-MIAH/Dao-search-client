@@ -1,0 +1,26 @@
+.playGame-container{
+  background:
+	linear-gradient(#19d3ae73,#598a9288),
+    linear-gradient(#19d3ae73,#598a9288),	
+	url(../../img/dao-network-on-blue-background-260nw-2106311888.webp) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  font-family: "Poppins";
+}
+.playGame-container h3{
+ padding-top: 50px;
+ color: white;
+ 
+}
+.playGame-container h6{
+ margin-top: 180px;
+ font-size: 25px;
+ color: white;
+ font-weight: 500;
+ 
+}
+.G-options{
+  cursor: pointer;
+}

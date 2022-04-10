@@ -11,10 +11,12 @@ menu ul li{
 }
 menu ul li:first-child{
  margin-left: 0px;
+ color: rgb(24 15 119);
+ border-bottom: 2px solid rgb(24 15 119);
 }
 menu ul li:hover{
  color: rgb(24 15 119);
- border-bottom: 2px solid rgb(24 15 119);
+ 
 }
 
 .userContent{

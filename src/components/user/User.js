@@ -11,14 +11,19 @@ const User = (props) => {
     console.log("clicked");
     history.push(`/user/${id}`)
   }
+
+
   return (
     <span onClick={() => handleUserProfileDetails(_id)}>
-    <div className='user-div' >
-      <p><span>Name:</span> {name}</p>
-      <p><span>Owned by:</span> {address}</p>
-      <p><span>Vote:</span> {vote_given}</p>
-      <p><span>WebSite Link:</span> {twitter.website_link}</p>
-    </div>
+      <div className='user-div my-3'>
+        <div className='d-flex'>
+          <p><span>Name:</span> {name}</p> 
+          <button className='socialGraph-btn'>Social Graph</button>
+        </div>
+        <p><span>Owned by:</span> {address}</p>
+        <p><span>Vote:</span> {vote_given}</p>
+        <p><span>WebSite Link:</span> {twitter.website_link}</p>
+      </div>
     </span>
   );
 };
