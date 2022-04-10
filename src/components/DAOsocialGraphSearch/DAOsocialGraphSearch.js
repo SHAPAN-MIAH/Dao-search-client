@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DAOsocialGraphSearch.css'
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -33,6 +33,19 @@ const DAOsocialGraphSearch = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const [searchFilterData, setSearchFilterData] = useState([])
+  const HandleSearch = (e) => {
+    const query = e.target.search.value;
+
+    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setSearchFilterData(data)
+    });
+
+    e.preventDefault()
+  }
 
   const drawer = (
     <div className='nastedRoute-container'>
@@ -106,7 +119,7 @@ const DAOsocialGraphSearch = (props) => {
               </IconButton>
               <Typography  variant="h6" noWrap component="div">
                 <div className=''>
-                  <form  className='DAOsocialGraphSearch-InputContainer' >
+                  <form onSubmit={HandleSearch} className='DAOsocialGraphSearch-InputContainer' >
                     <input type="text" name='search' placeholder="Search....." className="form-control shadow-none DAOsocialGraphSearchInput"  />
                     <button type="submit"><FontAwesomeIcon icon={faSearch} /></button>
                   </form>
@@ -153,7 +166,7 @@ const DAOsocialGraphSearch = (props) => {
             <Toolbar />
             <Switch>
               <Route exact path={path}>
-                <SearchUsers/>
+                <SearchUsers searchFilterData={searchFilterData}/>
               </Route>
               {/* <Route path={`${path}/user/:id`}>
                 <UserDetails />

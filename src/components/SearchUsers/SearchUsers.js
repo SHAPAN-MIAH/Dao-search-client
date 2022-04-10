@@ -6,14 +6,8 @@ import User from './../user/User';
 // import { CultureCommunityDAO } from '../../FakeData1';
 // import userProfileData from '../../fakeData';
 
-const SearchUsers = () => {
-
-  // const handleAddProduct = () => {
-  //   axios.post('https://dry-cliffs-15181.herokuapp.com/cultureCommunityDAOdata', CultureCommunityDAO)
-  //   .then(res => {
-  //     alert('Product added successfully.')
-  //   })
-  // }
+const SearchUsers = (props) => {
+  const searchData = props.searchFilterData
 
   const [userProfileData, setUserProfileData] = useState([]);
 
@@ -23,6 +17,7 @@ const SearchUsers = () => {
     .then((data) => setUserProfileData(data));
   }, []);
 
+  
   return (
     <div>
       <menu>
@@ -38,7 +33,7 @@ const SearchUsers = () => {
       {/* <button onClick={handleAddProduct} type=""></button> */}
       <div className='userContent'>
         {
-          userProfileData.map(user => <User key={user.id} user={user}></User>)
+          searchData.length? searchData.map(user => <User key={user.id} user={user}></User>):userProfileData.map(user => <User key={user.id} user={user}></User>)
         }
       </div>
     </div>

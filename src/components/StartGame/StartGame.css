@@ -13,7 +13,7 @@
  
 }
 .playGame-container h6{
- margin-top: 180px;
+ margin-top: 80px;
  font-size: 25px;
  color: white;
  font-weight: 500;
@@ -22,9 +22,13 @@
 .G-options{
   cursor: pointer;
 }
+.gameOptions{
+  margin-top: -10px!important;
+}
 
 .correctResult{
-  color: rgb(234, 15, 84);
-  font-size: 25px;
-  font-weight: 500;
+  color: rgb(206, 2, 2);
+  font-size: 50px;
+  font-weight: 600;
+  padding-top: 40px;
 }

@@ -1,39 +1,24 @@
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import DAOCategoryFilterItem from '../DAOCategoryFilterItem/DAOCategoryFilterItem';
 import './DAOSearchByCategory.css'
 
 const DAOSearchByCategory = () => {
-  const [query, setQuery] = useState('')
-
   const [searchFilterData, setSearchFilterData] = useState([])
-  const [allData, setAllData] = useState([])
   const [filterData, setFilterData] = useState([])
 
-  const queryItem = allData.map(item => {
-    return (item.name)
-  });
+  const HandleSearch = (e) => {
+    const query = e.target.search.value;
 
-
-  fetch(`https://dry-cliffs-15181.herokuapp.com/userProfiles`)
+    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}`)
     .then((res) => res.json())
     .then((data) => {
-      setAllData(data)
-    }
-  );
+      setSearchFilterData(data)
+    });
 
-  // const HandleSearch = () => {
-  //   useEffect(() => {
-  //     fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?q=${query}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setSearchFilterData(data)
-  //       setQuery('')
-  //     });
-  //   }, []);
-
-  // }
+    e.preventDefault()
+  }
 
 
   const FilterDAO  = () => {
@@ -128,8 +113,8 @@ const DAOSearchByCategory = () => {
           </select>
 
           <div>
-            <form  className='category-searchInput-container d-flex'>
-              <input type="text" onBlur={e => setQuery(e.target.value)} placeholder="Search by category" className="form-control shadow-none category-searchInput"  />
+            <form onSubmit={HandleSearch} className='category-searchInput-container d-flex'>
+              <input type="text" name='search' placeholder="Search by category" className="form-control shadow-none category-searchInput"  />
               <button  type="submit">Search</button>
             </form>
           </div>
@@ -143,7 +128,14 @@ const DAOSearchByCategory = () => {
       </div>
       <div>
         {
-          // searchFilterData.map(searchItem => <li>{searchItem.name}</li>)
+          searchFilterData.map(searchItem => <div>
+            <div className='user-div my-3'>
+              <p><span>Name:</span>{searchItem.name}</p> 
+              <p><span>Owned by:</span> {searchItem.address}</p>
+              <p><span>Vote:</span> {searchItem.vote_given}</p>
+              <p><span>WebSite Link:</span> {searchItem.twitter.website_link}</p>
+            </div>
+            </div>)
         }
       </div>
     </div>
