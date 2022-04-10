@@ -1,5 +1,4 @@
 import React from 'react';
-import daoImg from '../../img/dao-network-on-blue-background-260nw-2106311888.webp'
 import './Game.css'
 
 const Game = () => {

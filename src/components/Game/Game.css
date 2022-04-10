@@ -10,15 +10,13 @@
 .game-img{
   height: 400px;
   background:
-	linear-gradient(#19d3ae73,#598a9288),
-    linear-gradient(#19d3ae73,#598a9288),	
-	url(../../img/dao-network-on-blue-background-260nw-2106311888.webp) center center;
+	url(../../img/bannerMobile.svg) center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .game-img h6{
-  margin-top: 180px;
+  margin-top: 150px;
   font-size: 25px;
   color: rgb(255, 255, 255);
 }
@@ -46,14 +44,14 @@
 	linear-gradient(#f4f4f473,#f4f4f473),
     linear-gradient(#f4f4f473,#f4f4f473),	
 	url(../../img/photo-1534237710431-e2fc698436d0.jpg) center center;
-  margin-top: 100px !important;
+  margin-top: 50px !important;
   background-color: aliceblue;
   border-radius: 100px;
   width: 200px;
   height: 200px;
   margin: 0 30px;
   text-align: center;
-  
+  /* border: 3px solid rgb(124, 16, 50); */
 }
 .game-options p{
  color: rgb(34, 21, 171);

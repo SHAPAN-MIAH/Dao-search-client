@@ -9,7 +9,7 @@ import User from './../user/User';
 const SearchUsers = () => {
 
   // const handleAddProduct = () => {
-  //   axios.post('http://localhost:5500/cultureCommunityDAOdata', CultureCommunityDAO)
+  //   axios.post('https://dry-cliffs-15181.herokuapp.com/cultureCommunityDAOdata', CultureCommunityDAO)
   //   .then(res => {
   //     alert('Product added successfully.')
   //   })
@@ -18,7 +18,7 @@ const SearchUsers = () => {
   const [userProfileData, setUserProfileData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5500/userProfiles")
+    fetch("https://dry-cliffs-15181.herokuapp.com/userProfiles")
     .then((res) => res.json())
     .then((data) => setUserProfileData(data));
   }, []);

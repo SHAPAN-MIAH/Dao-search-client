@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import blockchainImg from '../../img/istock-680381152zapp2photo.jpg';
 import logo from '../../img/flc_design2022040917829.png'
 import gameIcon from '../../img/Google_Play_Games_icon.png'
 import './Home.css';
@@ -51,9 +50,7 @@ const Home = () => {
               Search and explore it's posts, people and connections.
             </h5>
           </div>
-          {/* <div className='mt-5 mb-5 blockchainImg'>
-            <img width='300px' src={blockchainImg} alt=""/>
-          </div> */}
+          
           <div id='results-content'>
             {
               results.map(result => <ResultContent key={result.id} result={result}></ResultContent>)

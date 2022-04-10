@@ -7,7 +7,7 @@ const UserDetails = () => {
   const [userProfiles, setUserProfiles] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5500/userProfiles/${id}`)
+    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfiles/${id}`)
       .then((res) => res.json())
       .then((data) => setUserProfiles(data));
   }, []);

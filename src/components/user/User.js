@@ -18,7 +18,7 @@ const User = (props) => {
       <div className='user-div my-3'>
         <div className='d-flex'>
           <p><span>Name:</span> {name}</p> 
-          <button className='socialGraph-btn'>Social Graph</button>
+          <button className='socialGraph-btn'>DAO graph</button>
         </div>
         <p><span>Owned by:</span> {address}</p>
         <p><span>Vote:</span> {vote_given}</p>

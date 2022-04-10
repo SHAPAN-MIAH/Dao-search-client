@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './SeeLatestPostOfDAO.css'
 import ResultContent from './../ResultContent/ResultContent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SeeLatestPostOfDAO = () => {
   const [results, setResults] = useState([]);
@@ -19,6 +21,7 @@ const SeeLatestPostOfDAO = () => {
 
   return (
     <div className='container'>
+      <p  className='backBtn mt-5'><a href="/"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
       <h2 className='title text-center mt-5'>See latest post of DAO</h2>
           <div className=' mt-4 mb-5'>
           {/* <div className="gcse-search"></div> */}

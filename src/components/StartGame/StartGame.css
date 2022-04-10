@@ -1,8 +1,6 @@
 .playGame-container{
-  background:
-	linear-gradient(#19d3ae73,#598a9288),
-    linear-gradient(#19d3ae73,#598a9288),	
-	url(../../img/dao-network-on-blue-background-260nw-2106311888.webp) center center;
+  background:	
+	url(../../img/bannerMobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;

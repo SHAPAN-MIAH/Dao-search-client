@@ -1,6 +1,8 @@
 import React from 'react';
 import graphImg from '../../img/social-graph.png'
 import './UserDetailsContent.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const UserDetailsContent = (props) => {
   const {_id, name, address, org, Member_of_DAO, vote_given, twitter} = props.userProfile;
@@ -11,10 +13,11 @@ const UserDetailsContent = (props) => {
   }
   return (
     <div className='container'>
+      <p  className='backBtn mt-5'><a href="/DAOsocialGraphSearch"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
       <div className='user-div mt-5' >
         <div className='d-flex'>
           <p><span>Name:</span> {name}</p> 
-          <button onClick={ShowGraph} className='socialGraph-btn'>Social Graph</button>
+          <button onClick={ShowGraph} className='socialGraph-btn'>DAO graph</button>
         </div>
         <p><span>Owned by:</span> {address}</p>
         <p><span>Vote:</span> {vote_given}</p>
@@ -24,7 +27,7 @@ const UserDetailsContent = (props) => {
       </div>
 
       <div className='socialGraph mt-5'>
-        <img width={500} src={graphImg} alt=""/>
+        <img width={600} src={graphImg} alt=""/>
       </div>
     </div>
   );

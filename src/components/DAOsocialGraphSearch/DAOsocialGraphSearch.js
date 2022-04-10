@@ -17,7 +17,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar,faUser, faFolder, faUsers, faLaptop, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faUser, faFolder, faUsers, faLaptop, faSearch, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import SearchUsers from '../SearchUsers/SearchUsers';
 import UserDetails from '../UserDetails/UserDetails';
 import logo from '../../img/flc_design2022040917829.png'
@@ -41,10 +41,11 @@ const DAOsocialGraphSearch = (props) => {
          </h6>
 
       <div className='ml-5 mt-4'>
-        <div className='mb-4'>
+        {/* <div className='mb-4'>
           <h5 className='filterTitle'>Filter results by</h5>
           <p className='Expand'>Expand all</p>
-        </div>
+        </div> */}
+        <p  className='backBtn mt-5'><a href="/"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
         <Divider />
         <div className='filter-option d-flex'>
           <span><FontAwesomeIcon icon={faFolder} /></span> 
@@ -72,10 +73,10 @@ const DAOsocialGraphSearch = (props) => {
           <small>+</small>
         </div> */}
       </div>
-      <div className='applyFilter'>
+      {/* <div className='applyFilter'>
         <button type="">Apply Filters</button>
         <span>Reset</span>
-      </div>
+      </div> */}
     </div>
   );
 
