@@ -1,9 +1,12 @@
 import React from 'react';
 import './Game.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Game = () => {
   return (
     <div className='container'>
+      <p  className='backBtn mt-5'><a href="/"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
       <div className='row game-container'>
         <div className='col-md-4'>
           <div className='game-content'>
