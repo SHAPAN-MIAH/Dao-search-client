@@ -1,11 +1,13 @@
 .game-container{
   width: 65vw;
+  height: 50vh;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   margin-top: 50px;
   border-radius: 20px;
   background-color: aliceblue;
   font-family: "Poppins";
+  overflow: hidden;
 }
 .game-img{
   height: 400px;
@@ -22,7 +24,7 @@
 }
 
 .game-content{
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .game-content h3{
   margin-top: 100px;
@@ -41,9 +43,10 @@
 
 .G-options{
   background:
-	linear-gradient(#f4f4f473,#f4f4f473),
-    linear-gradient(#f4f4f473,#f4f4f473),	
-	url(../../img/photo-1534237710431-e2fc698436d0.jpg) center center;
+	linear-gradient(#f4f4f472,#f4f4f472),
+    linear-gradient(#f4f4f472,#f4f4f472),	
+	url(../../img/photo-1534237710431-e2fc698436d0.jpg) center;
+  background-size: cover;
   margin-top: 50px !important;
   background-color: aliceblue;
   border-radius: 100px;
@@ -51,11 +54,12 @@
   height: 200px;
   margin: 0 30px;
   text-align: center;
-  /* border: 3px solid rgb(124, 16, 50); */
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 }
-.game-options p{
- color: rgb(34, 21, 171);
- font-size: 20px;
-font-weight: 500;
- margin-top: 80px
+.game-options-container p{
+  color: rgb(195, 16, 58);
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 80px
 }

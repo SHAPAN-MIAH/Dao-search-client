@@ -7,7 +7,7 @@ const Game = () => {
   return (
     <div className='container'>
       <p  className='backBtn mt-5'><a href="/"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
-      <div className='row game-container'>
+      <div className='row game-container gx-0'>
         <div className='col-md-4'>
           <div className='game-content'>
             <h3>When the announcement of DAO is made?</h3>
@@ -16,7 +16,7 @@ const Game = () => {
         </div>
         <div className='col-md-8'>
           <div className='game-img'>
-            <div className='d-flex justify-content-center game-options'>
+            <div className='d-flex justify-content-center game-options-container'>
               <div className='G-options'>
               <p>May, 2015</p>
               </div>

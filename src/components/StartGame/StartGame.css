@@ -7,6 +7,11 @@
   text-align: center;
   font-family: "Poppins";
 }
+.gameTitle{
+  padding-top: 100px;
+  color: white;
+  font-weight: 600;
+}
 .playGame-container h3{
  padding-top: 50px;
  color: white;
@@ -24,11 +29,133 @@
 }
 .gameOptions{
   margin-top: -10px!important;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 }
 
 .correctResult{
   color: rgb(206, 2, 2);
   font-size: 50px;
   font-weight: 600;
-  padding-top: 40px;
+  /* padding-top: 40px; */
+}
+
+.closeGame{
+  /* border: 1px solid white; */
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 30px;
+  padding-top: 20px;
+}
+
+.timesIcon{
+  background-color: rgba(255, 255, 255, 0.507);
+  padding: 3px 15px;
+  border-radius: 100px;
+  color: gray;
+  font-size: 30px;
+  text-decoration: none;
+}
+.timesIcon:hover{
+  background-color: rgba(255, 201, 201, 0.507);
+  color: red;
+}
+
+
+
+.firstCorrectAns-container, 
+.secondCorrectAns-container{
+  display: none;
+}
+.heartIcons{
+  margin-bottom: 50px;
+}
+.heartIcon{
+  font-size: 40px;
+  /* color: rgb(215, 24, 24); */
+  color: rgb(255, 255, 255);
+  margin: 0 15px;
+}
+.firstCorrectAns-content{
+  color: white;
+}
+
+
+.firstCorrectAnsNext-btn{
+  border: none;
+  background-color: rgb(24 15 119);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: white;
+  margin-top: 50px;
+}
+.firstCorrectAnsNext-btn:hover{
+  background-color: rgb(37, 25, 169);
+}
+
+
+.game-nextOptions-container{
+  display: none;
+  color: rgb(215, 24, 24);
+  font-size: 40px;
+  font-weight: 600;
+}
+.next_gameOptions1 p{
+  color: rgb(195, 16, 58);
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 60px
+}
+.next_gameOptions2 p{
+  color: rgb(195, 16, 58);
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 70px
+}
+.next_gameOptions1, .next_gameOptions2 {
+  background:
+	linear-gradient(#f4f4f472,#f4f4f472),
+    linear-gradient(#f4f4f472,#f4f4f472),	
+	url(../../img/photo-1534237710431-e2fc698436d0.jpg) center;
+  background-size: cover;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 0 30px;
+  text-align: center;
+  margin-top: -10px!important;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  cursor: pointer;
+  display: none;
+}
+.or{
+  display: none;
+}
+
+
+.gameOver-container{
+  display: none;
+  color: white;
+}
+
+.points{
+  background-color: rgba(189, 189, 189, 0.23);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 100px;
+  margin: auto;
+  padding: 10px 0px;
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.congratulation{
+  background-color: white;
+  color: rgb(37, 25, 169);
+  height: 100px;
+  width: auto;
+  display: flex;
 }
