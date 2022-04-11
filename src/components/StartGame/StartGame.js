@@ -162,12 +162,14 @@ const StartGame = () => {
                     
                   </div> */}
                   <div>
+                    
                     <h1 className='gameOver-title'>Game Over</h1>
 
                     <div className='gameOver-content'>
                       <h1 className='points'>200</h1>
                       <h5 >Points</h5>
-                      <h2>Amazing ! <img width={50} src={troffeImg} alt=""/></h2>
+                      <h2>Amazing Well Played!! <img width={50} src={troffeImg} alt=""/></h2>
+                      
                     </div>
                   </div>
                 </div>
