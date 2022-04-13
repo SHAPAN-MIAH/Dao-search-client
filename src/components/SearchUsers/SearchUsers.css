@@ -1,7 +1,8 @@
 menu ul{
  display: flex;
  text-align: left;
- margin-top: 20px;
+ margin-top: 50px;
+ margin-bottom: 20px;
 }
 menu ul li{
  list-style: none;

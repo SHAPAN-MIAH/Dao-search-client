@@ -13,7 +13,7 @@ const UserDetailsContent = (props) => {
   }
   return (
     <div className='container'>
-      <p  className='backBtn mt-5'><a href="/DAOsocialGraphSearch"><FontAwesomeIcon icon={faArrowLeft} /> Back to Home</a></p>
+      <p  className='backBtn mt-5'><a href="/DAOsocialGraphSearch"><FontAwesomeIcon icon={faArrowLeft} /> Back</a></p>
       <div className='user-div mt-5' >
         <div className='d-flex'>
           <p><span>Name:</span> {name}</p> 

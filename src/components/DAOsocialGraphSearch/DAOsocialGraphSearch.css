@@ -53,18 +53,25 @@
 }
 .heading{
   background: #ffffff;
-  padding: 20px;
+  padding: 30px;
 }
 
 .DAOsocialGraphSearch-InputContainer{
   display: flex;
+  margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .DAOsocialGraphSearch-InputContainer{
+    margin-left: 0px;
+  }
 }
 
 .DAOsocialGraphSearchInput{
-  width: 850px;
+  width: 900px;
   margin: auto;
   position: relative;
-  padding: 12px 20px;
+  padding: 16px 20px;
   padding-left: 120px;
   border-radius: 30px;
 }
@@ -72,7 +79,7 @@
   position: absolute;
   background-color: rgb(24 15 119);
   border: 1px solid rgb(24 15 119);
-  padding: 8px 40px;
+  padding: 12px 40px;
   color: rgb(255, 255, 255);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;

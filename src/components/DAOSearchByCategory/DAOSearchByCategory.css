@@ -42,7 +42,7 @@
 .category-searchInput{
   width: 550px;
   position: relative;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: 30px;
   outline: none;
 }
@@ -54,7 +54,7 @@
   margin-left: 415px;
   background-color: rgb(24 15 119);
   border: 1px solid rgb(24 15 119);
-  padding: 12px 40px;
+  padding: 14px 40px;
   color: rgb(255, 255, 255);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
