@@ -1,84 +1,47 @@
+import React, { useState } from 'react';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
 import DAOCategoryFilterItem from '../DAOCategoryFilterItem/DAOCategoryFilterItem';
 import './DAOSearchByCategory.css'
+// import {AllCategoryDaoData} from '../../AllCategoryDaoData'
+// import axios from 'axios';
 
 const DAOSearchByCategory = () => {
+  const [filterData, setFilterData] = useState([]);
   const [searchFilterData, setSearchFilterData] = useState([])
-  const [filterData, setFilterData] = useState([])
+
+
+  // const handelAddAllCategoryDao = () => {
+  //   axios.post(`http://localhost:5500/allCategoryDao`, AllCategoryDaoData)
+  //   .then(res => {
+  //     alert('data added successfully.')
+  //   })
+  // }
+
+
+  const FilterDAO  = () => {
+    setSearchFilterData([])
+
+    const selectCategory = document.querySelector('.selectCategory');
+
+    fetch(`https://dry-cliffs-15181.herokuapp.com/allCategoryDao?category=${selectCategory.value}`)
+    .then((res) => res.json())
+    .then((data) => setFilterData(data));
+    
+  }
 
   const HandleSearch = (e) => {
+    setFilterData([])
+
     const query = e.target.search.value;
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}`)
+    fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?Name=${query}`)
     .then((res) => res.json())
     .then((data) => {
       setSearchFilterData(data)
     });
 
     e.preventDefault()
-  }
-
-
-  const FilterDAO  = () => {
-    const selectCategory = document.querySelector('.selectCategory');
-    if(selectCategory.value === "CultureCommunityDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/cultureCommunityDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "DeFiPartnershipDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/DeFiPartnershipDao")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "DeFiProtocolDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/DeFiProtocolDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "EducationResearchDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/EducationResearchDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "GameSportsDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/GameSportsDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "InvestmentDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/InvestmentDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "LegalDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/LegalDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "NFTSArtDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/nFTSArtDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "SocialGoodDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/socialGoodDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "ToolSoftwaresDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/toolSoftwaresDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    if(selectCategory.value === "UtilityDAO"){
-      fetch("https://dry-cliffs-15181.herokuapp.com/utilityDAO")
-      .then((res) => res.json())
-      .then((data) => setFilterData(data));
-    }
-    
   }
 
   
@@ -93,8 +56,11 @@ const DAOSearchByCategory = () => {
           <h6>Search <span>DAO</span></h6>
           <p>Set your <span>DAO type</span> choose <span>category</span> to start your search. <a href=''>View search tips</a></p>
         </div>
+
+        {/* <button onClick={handelAddAllCategoryDao} type="">send</button> */}
+
         <div className='d-flex'>
-          <select onChange={()=>FilterDAO()} name="category" id="category" className='selectCategory'>
+          <select onClick={()=>FilterDAO()} name="category" id="category" className='selectCategory'>
             <optgroup label="">
               <option value="" disabled selected>Select category</option>
               <option value="CultureCommunityDAO">Culture Community DAO</option>
@@ -130,10 +96,9 @@ const DAOSearchByCategory = () => {
         {
           searchFilterData.map(searchItem => <div>
             <div className='user-div my-3'>
-              <p><span>Name:</span>{searchItem.name}</p> 
-              <p><span>Owned by:</span> {searchItem.address}</p>
-              <p><span>Vote:</span> {searchItem.vote_given}</p>
-              <p><span>WebSite Link:</span> {searchItem.twitter.website_link}</p>
+              <p><span>Name: </span>{searchItem.Name}</p> 
+              <p><span>Description: </span> {searchItem.Description}</p>
+              <p><span>WebSite Link: </span> {searchItem.Website}</p>
             </div>
             </div>)
         }

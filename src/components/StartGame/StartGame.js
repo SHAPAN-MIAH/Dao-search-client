@@ -5,36 +5,43 @@ import {  faFire, faHeart, faTimes } from '@fortawesome/free-solid-svg-icons';
 import congratulationImg from '../../img/congratulation.jpg'
 import troffeImg from '../../img/1986987.png'
 
-// import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 const StartGame = () => {
-  // const { width, height } = useWindowSize()
 
   const gameHandler = () => {
     const gameOptions = document.querySelector('.gameOptions')
     const gameTitle = document.querySelector('.gameTitle')
     const gameOptionsContainer = document.querySelector('.game-options-container')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
 
     const firstCorrectAnsContainer = document.querySelector('.firstCorrectAns-container')
 
     gameTitle.style.display = "none";
     gameOptionsContainer.innerHTML = "";
     gameOptions.style.display = "none";
+    progressbar1.style.display = "none";
+    pts.style.display = "none";
 
     firstCorrectAnsContainer.style.display = "block"
-
-    // gameOptions.innerHTML = "Amazing!<br/>Your earn point is 100"
-    // gameOptions.style.color = "lightGreen"
   }
   const gameHandler2 = () => {
     const GOptions = document.querySelector('.G-options')
     const gameTitle = document.querySelector('.gameTitle')
     const gameOptions = document.querySelector('.game-options-container')
+    const inCorrectResult = document.querySelector('.inCorrectResult')
+    const firstInCorrectAnsContainer = document.querySelector('.firstInCorrectAns-container')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
 
     gameTitle.innerHTML = "";
+    gameOptions.innerHTML = "";
     GOptions.style.display = "none";
-    gameOptions.innerHTML = "Incorrect!<br/>Your earn point is 0 <br/> Play Again."
+    progressbar1.style.display = "none";
+    pts.style.display = "none";
+    inCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
+    firstInCorrectAnsContainer.style.display = 'block'
   }
 
   const NextQuizHandler = () => {
@@ -44,6 +51,8 @@ const StartGame = () => {
     const nextGameOptions1 = document.querySelector('.next_gameOptions1')
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
 
     gameTitle.innerHTML = "What is DAO?"
     gameTitle.style.display = "block"
@@ -53,7 +62,31 @@ const StartGame = () => {
     nextGameOptions1.style.display = "block"
     nextGameOptions2.style.display = "block"
     or.style.display = "block"
+    progressbar1.style.display = "block";
+    pts.style.display = "block";
 
+  }
+
+  const FirstInCorrectNextQuizHandler = () => {
+    const firstInCorrectAnsContainer = document.querySelector('.firstInCorrectAns-container')
+    const gameTitle = document.querySelector('.gameTitle')
+    const gameNextOptionsContainer = document.querySelector('.game-nextOptions-container')
+    const nextGameOptions1 = document.querySelector('.next_gameOptions1')
+    const nextGameOptions2 = document.querySelector('.next_gameOptions2')
+    const or = document.querySelector('.or')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
+
+    firstInCorrectAnsContainer.style.display = 'none'
+
+    gameTitle.innerHTML = "What is DAO?"
+    gameTitle.style.display = "block"
+    gameNextOptionsContainer.style.display = "block"
+    nextGameOptions1.style.display = "block"
+    nextGameOptions2.style.display = "block"
+    or.style.display = "block"
+    progressbar1.style.display = "block";
+    pts.style.display = "block";
   }
 
   const nextGameHandler  = () =>{
@@ -63,6 +96,8 @@ const StartGame = () => {
     const nextGameOptions1 = document.querySelector('.next_gameOptions1')
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
 
     secondCorrectAnsContainer.style.display = "block"
     gameTitle.style.display = "none"
@@ -70,6 +105,8 @@ const StartGame = () => {
     nextGameOptions1.style.display = "none"
     nextGameOptions2.style.display = "none"
     or.style.display = "none"
+    progressbar1.style.display = "none";
+    pts.style.display = "none";
   }
   
   const nextGameHandler2  = () =>{
@@ -78,12 +115,31 @@ const StartGame = () => {
     const nextGameOptions1 = document.querySelector('.next_gameOptions1')
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
+    const progressbar1 = document.querySelector('#progressbar1')
+    const pts = document.querySelector('.pts')
+    const secondInCorrectAnsContainer = document.querySelector('.secondInCorrectAns-container')
+    const secondInCorrectResult = document.querySelector('.secondInCorrectResult')
 
-    gameNextOptionsContainer.innerHTML = "Incorrect!<br/>Your earn point is 0 <br/> Play Again."
+    gameNextOptionsContainer.innerHTML = ""
     gameTitle.innerHTML = ""
     nextGameOptions1.style.display = "none"
     nextGameOptions2.style.display = "none"
     or.style.display = "none"
+    progressbar1.style.display = "none";
+    pts.style.display = "none";
+    secondInCorrectAnsContainer.style.display = 'block'
+    secondInCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
+    
+  }
+
+  const SecondInCorrectNextQuizHandler = () => {
+    const gameOverContainer = document.querySelector('.gameOver-container')
+    const secondInCorrectAnsContainer = document.querySelector('.secondInCorrectAns-container')
+    const gameTitle = document.querySelector('.gameTitle')
+
+    gameOverContainer.style.display = "block"
+    secondInCorrectAnsContainer.style.display = 'none'
+    gameTitle.style.display = 'none'
   }
 
   const gameOverHandler = () => {
@@ -93,14 +149,41 @@ const StartGame = () => {
     secondCorrectAnsContainer.style.display = "none"
     gameOverContainer.style.display = "block"
   }
+
   
+  const createProgressbar = (id, duration, callback) => {
+    const progressbar = document.getElementById(id);
+    progressbar.className = 'progressbar';
+  
+    const progressbarinner = document.createElement('div');
+    progressbarinner.className = 'inner';
+  
+    progressbarinner.style.animationDuration = duration;
+  
+    progressbar.appendChild(progressbarinner);
+    progressbarinner.style.animationPlayState = 'running';
+  }
+  
+  window.addEventListener('load', () => {
+    createProgressbar('progressbar1', '20s');
+  });
+
+
+
   return (
     <div className='playGame-container'>
       
       <p  className='closeGame'><a className=' timesIcon' href="/game"><FontAwesomeIcon icon={faTimes} /></a></p>
-      <h2 className='gameTitle'>When the announcement of DAO is made?</h2>
-      <div className='mt-5'>
-            <div className='d-flex justify-content-center game-options-container correctResult'>
+      
+      <div className='mt-3'>
+        <div className='d-flex'>
+          <h2 className='gameTitle'>When the announcement of DAO is made?</h2>
+          <span className=' pts'>100 pts</span>
+        </div>
+        
+        <div id='progressbar1'></div>
+
+            <div className='mt-5 d-flex justify-content-center game-options-container'>
               <div onClick={gameHandler2} className='G-options gameOptions'>
                 <p>May, 2015</p>
               </div>
@@ -124,6 +207,12 @@ const StartGame = () => {
 
                 <button onClick={NextQuizHandler} className='firstCorrectAnsNext-btn' type="">Continue</button>
               </div>
+            </div>
+
+            <div className='firstInCorrectAns-container'>
+              <h2 className='inCorrectResult'></h2>
+              <a href="/game"><button className='firstCorrectAnsNext-btn' type="">Play Again</button></a>
+              <button onClick={FirstInCorrectNextQuizHandler} className='firstInCorrectAnsNext-btn' type="">Continue</button>
             </div>
 
 
@@ -154,15 +243,16 @@ const StartGame = () => {
               </div>
             </div>
 
+            <div className='secondInCorrectAns-container'>
+              <h2 className='secondInCorrectResult'></h2>
+              <a href="/game"><button className='firstCorrectAnsNext-btn' type="">Play Again</button></a>
+              <button onClick={SecondInCorrectNextQuizHandler} className='firstInCorrectAnsNext-btn' type="">Continue</button>
+            </div>
+
             <div className='gameOver-container  mt-5'>
             <Confetti/>
                 <div className='d-flex justify-content-center'>
-                  {/* <div className='congratulation'>
-                    <h1>   Well Played! <img width={50} src={congratulationImg} alt=""/></h1>
-                    
-                  </div> */}
                   <div>
-                    
                     <h1 className='gameOver-title'>Game Over</h1>
 
                     <div className='gameOver-content'>

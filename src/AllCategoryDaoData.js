@@ -1,4 +1,4 @@
-export const CultureCommunityDAO = [
+export const AllCategoryDaoData = [
   {
     "Name": "Friends With Benefits Pro",
     "Description": "FWB is a restricted creators/thinkers club that contemplates and organizes to enhance diverse crypto culture and the creative class. It acts on ideation, community-building, digital art gallery and more.",
@@ -34,10 +34,7 @@ export const CultureCommunityDAO = [
     "Description": "Co-op community support platform for musicians — 100% collectively owned by artists & worker",
     "Website": "https://twitter.com/joinbuild_\thttps://discord.gg/XrxbdcCvn5\thttps://buildcities.com/",
     "category": 'CultureCommunityDAO'
-  }
- ]
-
- export const DeFiPartnershipDAO = [
+  },
   {
     "Name": "BitDAO",
     "Description": "---To build, grant and partner towards a cross-ownership network of crypto projects promoting DeFi governance, treasury management and education.\n--expansion via specialized autonomous entities such as: ecosystem funds, artist guilds, farming cooperatives, R&D \n---To support builders of the decentralized economy. Gaming, ZK Ecosystem, Art guilds Farming and liquidity cooperatives, R&D, Events, Education, Social spaces\n-- Treasury mechanism, bonding and insurance mechanisms ",
@@ -115,10 +112,7 @@ export const CultureCommunityDAO = [
     "Description": " members to elect representatives periodically to carry out different roles in a dynamic DAO ecosystem.\nSynthetix incorporates six different DAOs designed to play specified governance roles within the Synthethix ecosystem.Spartan Council\nProtocol DAO, Synthetix DAO, Ambassador DAO, Grant DAO, Core ContributorsSpartan Council , Protocol DAO , Synthetix DAO, Ambassador DAO, Grant DAO\nCore Contributors",
     "Website": "https://grants.synthetix.io/grants/grant-application",
     "category": 'DeFiPartnershipDAO'
-  }
- ]
-
- export const DeFiProtocolDAO = [
+  },
   {
     "Name": "Uniswap DAO",
     "Description": "The Uniswap token enables community ownership and active stewardship of the Protocol. UNI holders govern the Protocol through an on-chain governance process.To enable a self-sustainable and competitive decentralized exchange. The governance structure gave the Uniswap community a say over the day-to-day running and development of the project. More specifically, anyone holding UNI tokens could either vote or delegate votes on development proposals that could alter the operation or infrastructure of the Uniswap Protocol.",
@@ -415,11 +409,7 @@ export const CultureCommunityDAO = [
     "Governance Forum": "",
     "Proposal Page": "",
     "category": 'DeFiProtocolDAO'
-  }
- ]
-
-
- export const EducationResearchDAO = [
+  },
   {
     "Name": "VitaDAO",
     "Description": "Vita DAO is an open cooperative with a scientific council, set to enhance applicative longevity research by acquiring, supporting and financing relevant data and (preferably early-stage) projects. Products are tokenizes as Vita intellectual property.",
@@ -515,11 +505,7 @@ export const CultureCommunityDAO = [
     "Description": "Ocean Protocol is a marketplace for publishing, curating and buying access to all kinds of data via ERC20 tokens on Ethereum. Tokens allow for fungible access to data sources, and a credentialed whitelist of addresses is used to give more fine-grained access to specific records within individual datasets.\n\nOcean’s DAO focuses on community grants for the Ocean ecosystem; proposals for which are curated and voted on by $OCEAN holders.\n",
     "Website": "https://oceanprotocol.com/dao",
     "category": 'EducationResearchDAO'
-  }
- ]
-
-
- export const GameSportsDAO = [
+  },
   {
     "Name": "Decentral Games",
     "Description": "Economic freedom to player. Play to earn and scale your own metaverse business. ",
@@ -615,11 +601,7 @@ export const CultureCommunityDAO = [
     "Description": "https://www.joystream.org/\t\t\t\tVideo Platform DAO\t\tReplenisheable fiat pool managed by JSGenesis\tJoined the Discord, then joined the Forum: https://testnet.joystream.org/\t\tCouncil Members have the right to vote. Currently Cpuncil seats number is 16 people. Proposal can be created by anyone, but they cost some token\t\"Active platform participants (so called Founding Members) will get an allocation of 15% of mainnet token\nhttps://www.joystream.org/token\"\tSubstrate Blockchain with a lot of custom types and pallets. Typescript and React on FE",
     "Website": "",
     "category": 'GameSportsDAO'
-  }
- ]
-
-
- export const InvestmentDAO = [
+  },
   {
     "Name": "Giveth",
     "Description": "https://giveth.io\t\t\t\tBuild the future of giving\t\tCurrently donations from community members and benevolent whales, eventually with positive-sum revenues (interest generated on idle donations)\thttps://giveth.io/join\t\tCurrently with an Aragon DAO on xDAI, soon with a Garden on xDAI\tToken coming soon. a reputation token rewarded to contributors is being used to vote on a proposal for the allocation of the upcoming governance token\tGarden, Discourse Forum, trace.giveth.io (for organizational structure), discord, github",
@@ -906,12 +888,7 @@ export const CultureCommunityDAO = [
     "Website": "https://www.sismo.io/",
     "Governance Forum": "",
     "category": 'InvestmentDAO'
-  }
- ]
-
-
-
- export const LegalDAO = [
+  },
   {
     "Name": "The LAO\n",
     "Description": "The LAO is a private venture fund focusing on DeFi & NFTs and enhancement. A registered Delware LLC DAO, it also plays a lead role in mobilizing legally authorized DAOs and their legal engineering.\nThe LAO is a global group of Ethereum enthusiasts and experts supporting the work of Ethereum builders.\n",
@@ -989,12 +966,7 @@ export const CultureCommunityDAO = [
     "Description": "Pooltogether is a nonprofit set to encourage saving over gambling. PoolTogether is a crypto-powered savings protocol based on Premium Bonds. Save money and have a chance to win every week.",
     "Website": "https://pooltogether.com/",
     "category": 'LegalDAO'
-  }
- ]
-
-
-
- export const NFTSArtDAO = [
+  },
   {
     "Name": "PartyDAO",
     "Description": " a tool for permissionless collective purchase, fractionalization and co-ownership of NFTs, already integrated with major NFT marketplaces.",
@@ -1198,12 +1170,7 @@ export const CultureCommunityDAO = [
     "Description": "ZooDAO enables NFT holders to earn an income by staking their NFTs into ‘battles’. Over seven days, voters stake $DAI on their favorite from the cohort and receive yield from yearn.finance in return. The cohort are then randomly paired into battles and boosted by further staking of $ZOO.\n\n",
     "Website": "https://zoodao.com/",
     "category": 'NFTSArtDAO'
-  }
- ]
-
-
-
- export const SocialGoodDAO = [
+  },
   {
     "Name": "blequity",
     "Description": "Blequity DAO was founded to fund black creators and initiatives through a treasury that's collectively owned by members and supporters of the black community. Its onchain activity is currently documented for 8 days during",
@@ -1329,12 +1296,7 @@ export const CultureCommunityDAO = [
     "Description": "Following in the wake of ConstitutionDAO’s success, AssangeDAO raised 16,593 $ETH (~$53m) to win an NFT auction in aid of Julian Assange’s extradition defense fund. The 1/1 NFT was produced by the digital artist Pak in collaboration with Julian Assange and his supporters.\n\nThe DAO treasury is controlled by a trusted multi-sig wallet but is actively governed on the forum and by the $JUSTICE token via Snapshot.",
     "Website": "https://assangedao.org/",
     "category": 'SocialGoodDAO'
-  }
- ]
-
-
-
- export const ToolSoftwaresDAO = [
+  },
   {
     "Name": "Cryptex",
     "Description": "Cryptex is focused on building innovative, open source financial products for the global Crypto community.",
@@ -1466,12 +1428,7 @@ export const CultureCommunityDAO = [
     "Description": "There’s no infrastructure more critical than the network of developers who build and maintain web3. DeveloperDAO was founded as a supportive community to accelerate developers’ impact and keep them in shape: physically, mentally, socially, and educationally. The DeveloperDAO Discord currently has over 15k members.\n\nUntil the release of the $CODE token, membership is gated by the ‘Devs for Revolution’ NFT collection, which enables full access to the community and voting. A recent forum poll and ratifying vote decided that after the token launch, $CODE tokens and NFTs will both enable community access to Discord, but only the tokens will be eligible to vote on proposals.",
     "Website": "https://www.developerdao.com/",
     "category": 'ToolSoftwaresDAO'
-  }
- ]
-
-
-
- export const UtilityDAO = [
+  },
   {
     "Name": "Dtravel",
     "Description": "Dtravel is a decentralized platform for property booking and renting, aimed to token-align a community of hosts and travelers to govern their traveling standards and economic parameters. The Growth funds are allocated toward onboarding incentives. A decentralized and community-governed platform with a cost effective and fair fee model.",
@@ -1483,12 +1440,7 @@ export const CultureCommunityDAO = [
     "Description": "LinksDAO is an aspiring web3 country club that will use proceeds from its NFT sale to purchase one of the world's greatest golf courses. The course will be owned by the DAO and membership benefits will be conferred via NFT.",
     "Website": "https://linksdao.io/",
     "category": 'UtilityDAO'
-  }
- ]
-
-
-
- export const noCategoryDAO = [
+  },
   {
     "Name": "Aragon Trust",
     "Description": "",
@@ -1659,4 +1611,4 @@ export const CultureCommunityDAO = [
     "Description": "",
     "Website": ""
   }
- ]
+]

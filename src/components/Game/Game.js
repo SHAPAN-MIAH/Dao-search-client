@@ -2,6 +2,7 @@ import React from 'react';
 import './Game.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import troffeImg from '../../img/1986987.png'
 
 const Game = () => {
   return (
@@ -16,6 +17,9 @@ const Game = () => {
         </div>
         <div className='col-md-8'>
           <div className='game-img'>
+            <div className='pts-text'>
+              <p className='text-center '><img width={20} src={troffeImg} alt=""/> 100 pts</p>
+            </div>
             <div className='d-flex justify-content-center game-options-container'>
               <div className='G-options'>
               <p>May, 2015</p>

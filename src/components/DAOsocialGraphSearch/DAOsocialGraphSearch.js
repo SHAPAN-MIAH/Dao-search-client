@@ -38,7 +38,7 @@ const DAOsocialGraphSearch = (props) => {
   const HandleSearch = (e) => {
     const query = e.target.search.value;
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}`)
+    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}&address=${query}`)
     .then((res) => res.json())
     .then((data) => {
       setSearchFilterData(data)
@@ -49,9 +49,10 @@ const DAOsocialGraphSearch = (props) => {
 
   const drawer = (
     <div className='nastedRoute-container'>
-      <h6 className=' mb-3'>
+      <h4 className=' mb-3'>
         <img width={120} src={logo} alt=""/>
-         </h6>
+        DAO Search
+         </h4>
 
       <div className='ml-5 mt-4'>
         {/* <div className='mb-4'>

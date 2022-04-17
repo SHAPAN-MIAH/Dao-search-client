@@ -1,3 +1,11 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .playGame-container{
   background:	
 	url(../../img/bannerMobile.svg);
@@ -8,9 +16,20 @@
   font-family: "Poppins";
 }
 .gameTitle{
-  padding-top: 100px;
+  padding-top: 20px;
+  margin-bottom: 20px;
   color: white;
   font-weight: 600;
+  text-align: left;
+  margin-left: 70px;
+}
+.pts{
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: 50px;
 }
 .playGame-container h3{
  padding-top: 50px;
@@ -30,18 +49,15 @@
 .gameOptions{
   margin-top: -10px!important;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 }
 
-.correctResult{
+.inCorrectResult, .secondInCorrectResult{
   color: rgb(206, 2, 2);
   font-size: 50px;
   font-weight: 600;
-  /* padding-top: 40px; */
 }
 
 .closeGame{
-  /* border: 1px solid white; */
   width: 50px;
   height: 50px;
   border-radius: 5px;
@@ -74,7 +90,6 @@
 }
 .heartIcon{
   font-size: 40px;
-  /* color: rgb(215, 24, 24); */
   color: rgb(255, 255, 255);
   margin: 0 15px;
 }
@@ -83,7 +98,8 @@
 }
 
 
-.firstCorrectAnsNext-btn{
+.firstCorrectAnsNext-btn, 
+.firstInCorrectAnsNext-btn{
   border: none;
   background-color: rgb(24 15 119);
   padding: 10px 30px;
@@ -92,8 +108,18 @@
   color: white;
   margin-top: 50px;
 }
-.firstCorrectAnsNext-btn:hover{
+.firstCorrectAnsNext-btn:hover, 
+.firstInCorrectAnsNext-btn:hover{
   background-color: rgb(37, 25, 169);
+}
+
+.firstInCorrectAnsNext-btn{
+  margin: 0 20px;
+}
+
+.firstInCorrectAns-container, 
+.secondInCorrectAns-container{
+  display: none;
 }
 
 
@@ -158,4 +184,32 @@
   height: 100px;
   width: auto;
   display: flex;
+}
+
+.progressbar {
+  width: 90%;
+  margin: auto;
+  border: none;
+  padding-bottom: 80px;
+}
+
+.progressbar .inner {
+  height: 2px;
+  animation: progressbar-countdown;
+  animation-duration: 40s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+    background: rgb(255, 255, 255);
+  }
+  100% {
+    width: 0%;
+    background: rgb(255, 0, 0);
+  }
 }
