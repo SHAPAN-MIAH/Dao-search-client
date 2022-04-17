@@ -213,3 +213,7 @@ body {
     background: rgb(255, 0, 0);
   }
 }
+
+#progressbar2{
+  display: none;
+}

@@ -14,6 +14,7 @@ const StartGame = () => {
     const gameTitle = document.querySelector('.gameTitle')
     const gameOptionsContainer = document.querySelector('.game-options-container')
     const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
 
     const firstCorrectAnsContainer = document.querySelector('.firstCorrectAns-container')
@@ -22,6 +23,7 @@ const StartGame = () => {
     gameOptionsContainer.innerHTML = "";
     gameOptions.style.display = "none";
     progressbar1.style.display = "none";
+    progressbar2.style.display = "none";
     pts.style.display = "none";
 
     firstCorrectAnsContainer.style.display = "block"
@@ -33,12 +35,14 @@ const StartGame = () => {
     const inCorrectResult = document.querySelector('.inCorrectResult')
     const firstInCorrectAnsContainer = document.querySelector('.firstInCorrectAns-container')
     const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
 
     gameTitle.innerHTML = "";
     gameOptions.innerHTML = "";
     GOptions.style.display = "none";
     progressbar1.style.display = "none";
+    progressbar2.style.display = "none";
     pts.style.display = "none";
     inCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
     firstInCorrectAnsContainer.style.display = 'block'
@@ -75,6 +79,7 @@ const StartGame = () => {
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
     const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
 
     firstInCorrectAnsContainer.style.display = 'none'
@@ -85,7 +90,8 @@ const StartGame = () => {
     nextGameOptions1.style.display = "block"
     nextGameOptions2.style.display = "block"
     or.style.display = "block"
-    progressbar1.style.display = "block";
+    progressbar1.style.display = "none";
+    progressbar2.style.display = "block";
     pts.style.display = "block";
   }
 
@@ -97,6 +103,7 @@ const StartGame = () => {
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
     const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
 
     secondCorrectAnsContainer.style.display = "block"
@@ -106,6 +113,7 @@ const StartGame = () => {
     nextGameOptions2.style.display = "none"
     or.style.display = "none"
     progressbar1.style.display = "none";
+    progressbar2.style.display = "none";
     pts.style.display = "none";
   }
   
@@ -116,6 +124,7 @@ const StartGame = () => {
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
     const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
     const secondInCorrectAnsContainer = document.querySelector('.secondInCorrectAns-container')
     const secondInCorrectResult = document.querySelector('.secondInCorrectResult')
@@ -126,6 +135,7 @@ const StartGame = () => {
     nextGameOptions2.style.display = "none"
     or.style.display = "none"
     progressbar1.style.display = "none";
+    progressbar2.style.display = "none";
     pts.style.display = "none";
     secondInCorrectAnsContainer.style.display = 'block'
     secondInCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
@@ -162,10 +172,52 @@ const StartGame = () => {
   
     progressbar.appendChild(progressbarinner);
     progressbarinner.style.animationPlayState = 'running';
+
+    if (typeof(callback) === 'function') {
+      progressbarinner.addEventListener('animationend', callback);
+    }
   }
   
   window.addEventListener('load', () => {
-    createProgressbar('progressbar1', '20s');
+    createProgressbar('progressbar1', '20s', function() {
+      const GOptions = document.querySelector('.G-options')
+      const gameTitle = document.querySelector('.gameTitle')
+      const gameOptions = document.querySelector('.game-options-container')
+      const inCorrectResult = document.querySelector('.inCorrectResult')
+      const firstInCorrectAnsContainer = document.querySelector('.firstInCorrectAns-container')
+      const progressbar1 = document.querySelector('#progressbar1')
+      const pts = document.querySelector('.pts')
+
+      gameTitle.innerHTML = "";
+      gameOptions.innerHTML = "";
+      GOptions.style.display = "none";
+      progressbar1.style.display = "none";
+      pts.style.display = "none";
+      inCorrectResult.innerHTML = "You have not chosen an options!<br/>Your earn point is 0."
+      firstInCorrectAnsContainer.style.display = 'block'
+    });
+
+    createProgressbar('progressbar2', '20s', function() {
+      const gameTitle = document.querySelector('.gameTitle')
+      const gameNextOptionsContainer = document.querySelector('.game-nextOptions-container')
+      const nextGameOptions1 = document.querySelector('.next_gameOptions1')
+      const nextGameOptions2 = document.querySelector('.next_gameOptions2')
+      const or = document.querySelector('.or')
+      const progressbar2 = document.querySelector('#progressbar2')
+      const pts = document.querySelector('.pts')
+      const secondInCorrectAnsContainer = document.querySelector('.secondInCorrectAns-container')
+      const secondInCorrectResult = document.querySelector('.secondInCorrectResult')
+
+      gameNextOptionsContainer.innerHTML = ""
+      gameTitle.innerHTML = ""
+      nextGameOptions1.style.display = "none"
+      nextGameOptions2.style.display = "none"
+      or.style.display = "none"
+      progressbar2.style.display = "none";
+      pts.style.display = "none";
+      secondInCorrectAnsContainer.style.display = 'block'
+      secondInCorrectResult.innerHTML = "You have not chosen an options!<br/>Your earn point is 0."
+    });
   });
 
 
@@ -182,6 +234,7 @@ const StartGame = () => {
         </div>
         
         <div id='progressbar1'></div>
+        <div id='progressbar2'></div>
 
             <div className='mt-5 d-flex justify-content-center game-options-container'>
               <div onClick={gameHandler2} className='G-options gameOptions'>
