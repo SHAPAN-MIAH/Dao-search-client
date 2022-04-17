@@ -38,7 +38,7 @@ const DAOsocialGraphSearch = (props) => {
   const HandleSearch = (e) => {
     const query = e.target.search.value;
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}&address=${query}`)
+    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?name=${query}`)
     .then((res) => res.json())
     .then((data) => {
       setSearchFilterData(data)

@@ -29,6 +29,7 @@ const SearchUsers = (props) => {
       <div className='userContent'>
         {
           searchData.length? searchData.map(user => <User key={user.id} user={user}></User>):userProfileData.map(user => <User key={user.id} user={user}></User>)
+          // searchData.map(user => <User key={user.id} user={user}></User>)
         }
       </div>
     </div>
