@@ -69,7 +69,7 @@ const StartGame = () => {
     const nextGameOptions1 = document.querySelector('.next_gameOptions1')
     const nextGameOptions2 = document.querySelector('.next_gameOptions2')
     const or = document.querySelector('.or')
-    const progressbar1 = document.querySelector('#progressbar1')
+    const progressbar2 = document.querySelector('#progressbar2')
     const pts = document.querySelector('.pts')
 
     gameTitle.innerHTML = "What is DAO?"
@@ -80,7 +80,7 @@ const StartGame = () => {
     nextGameOptions1.style.display = "block"
     nextGameOptions2.style.display = "block"
     or.style.display = "block"
-    progressbar1.style.display = "block";
+    progressbar2.style.display = "block";
     pts.style.display = "block";
 
   }
@@ -207,12 +207,12 @@ const StartGame = () => {
       const progressbar1 = document.querySelector('#progressbar1')
       const pts = document.querySelector('.pts')
 
-      gameTitle.innerHTML = "";
+      gameTitle.style.display = "none"
       gameOptions.innerHTML = "";
       GOptions.style.display = "none";
       progressbar1.style.display = "none";
       pts.style.display = "none";
-      inCorrectResult.innerHTML = "You have not chosen an options!<br/>The mark for this question is <br/> <h1>0</h1> <p>Points</p>"
+      inCorrectResult.innerHTML = "<span>Times Up!</span> <br/> <br/> You have not chosen an options.<br/><h5>The mark for this question is</h5> <br/> <h1>0</h1> <p>Points</p>"
       firstInCorrectAnsContainer.style.display = 'block'
     });
 
@@ -227,15 +227,15 @@ const StartGame = () => {
       const secondInCorrectAnsContainer = document.querySelector('.secondInCorrectAns-container')
       const secondInCorrectResult = document.querySelector('.secondInCorrectResult')
 
-      gameNextOptionsContainer.innerHTML = ""
-      gameTitle.innerHTML = ""
+      gameNextOptionsContainer.innerHTML = "";
+      gameTitle.style.display = "none"
       nextGameOptions1.style.display = "none"
       nextGameOptions2.style.display = "none"
       or.style.display = "none"
       progressbar2.style.display = "none";
       pts.style.display = "none";
       secondInCorrectAnsContainer.style.display = 'block'
-      secondInCorrectResult.innerHTML = "You have not chosen an options!<br/>The mark for this question is <br/> <h1>0</h1> <p>Points</p>"
+      secondInCorrectResult.innerHTML = "<span>Times Up!</span> <br/> <br/> You have not chosen an options.<br/> <h5>The mark for this question is</h5> <br/> <h1>0</h1> <p>Points</p>"
     });
   });
 
