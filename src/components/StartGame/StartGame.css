@@ -53,14 +53,14 @@ body {
 
 .inCorrectResult, .secondInCorrectResult{
   color: rgb(206, 2, 2);
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
 }
 .inCorrectResult h1, .secondInCorrectResult h1{
   color: rgb(255, 255, 255);
   font-size: 60px;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .inCorrectResult p, .secondInCorrectResult p{
   color: rgb(255, 255, 255);

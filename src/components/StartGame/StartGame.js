@@ -212,7 +212,7 @@ const StartGame = () => {
       GOptions.style.display = "none";
       progressbar1.style.display = "none";
       pts.style.display = "none";
-      inCorrectResult.innerHTML = "You have not chosen an options!<br/>Your earn point is 0."
+      inCorrectResult.innerHTML = "You have not chosen an options!<br/>The mark for this question is <br/> <h1>0</h1> <p>Points</p>"
       firstInCorrectAnsContainer.style.display = 'block'
     });
 
@@ -235,7 +235,7 @@ const StartGame = () => {
       progressbar2.style.display = "none";
       pts.style.display = "none";
       secondInCorrectAnsContainer.style.display = 'block'
-      secondInCorrectResult.innerHTML = "You have not chosen an options!<br/>Your earn point is 0."
+      secondInCorrectResult.innerHTML = "You have not chosen an options!<br/>The mark for this question is <br/> <h1>0</h1> <p>Points</p>"
     });
   });
 
