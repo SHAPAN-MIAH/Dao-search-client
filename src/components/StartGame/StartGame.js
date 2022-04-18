@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './StartGame.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFire, faHeart, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,8 @@ import troffeImg from '../../img/1986987.png'
 import Confetti from 'react-confetti'
 
 const StartGame = () => {
+  const [points, setPoints] = useState('0')
+  console.log(points)
 
   const gameHandler = () => {
     const gameOptions = document.querySelector('.gameOptions')
@@ -18,6 +20,10 @@ const StartGame = () => {
     const pts = document.querySelector('.pts')
 
     const firstCorrectAnsContainer = document.querySelector('.firstCorrectAns-container')
+    // const point = document.querySelector('.points').innerHTML
+    // const parsPoint = parseInt(point)
+
+    setPoints(100)
 
     gameTitle.style.display = "none";
     gameOptionsContainer.innerHTML = "";
@@ -27,7 +33,9 @@ const StartGame = () => {
     pts.style.display = "none";
 
     firstCorrectAnsContainer.style.display = "block"
+
   }
+
   const gameHandler2 = () => {
     const GOptions = document.querySelector('.G-options')
     const gameTitle = document.querySelector('.gameTitle')
@@ -46,6 +54,8 @@ const StartGame = () => {
     pts.style.display = "none";
     inCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
     firstInCorrectAnsContainer.style.display = 'block'
+
+    setPoints(0)
   }
 
   const NextQuizHandler = () => {
@@ -115,6 +125,8 @@ const StartGame = () => {
     progressbar1.style.display = "none";
     progressbar2.style.display = "none";
     pts.style.display = "none";
+
+    setPoints(100)
   }
   
   const nextGameHandler2  = () =>{
@@ -158,6 +170,8 @@ const StartGame = () => {
 
     secondCorrectAnsContainer.style.display = "none"
     gameOverContainer.style.display = "block"
+
+    setPoints(100 + 100)
   }
 
   
@@ -234,6 +248,18 @@ const StartGame = () => {
         </div>
         
         <div id='progressbar1'></div>
+        {/* <ul class="marker-list">
+            <li class="marker" style='left:10%;'></li>
+            <li class="marker" style='left:20%;'></li>
+            <li class="marker" style='left:30%;'></li>
+            <li class="marker" style='left:40%;'></li>
+            <li class="marker" style='left:50%;'></li>
+            <li class="marker" style='left:60%;'></li>
+            <li class="marker" style='left:70%;'></li>
+            <li class="marker" style='left:80%;'></li>
+            <li class="marker" style='left:90%;'></li>
+          </ul> */}
+
         <div id='progressbar2'></div>
 
             <div className='mt-5 d-flex justify-content-center game-options-container'>
@@ -255,7 +281,7 @@ const StartGame = () => {
                 <FontAwesomeIcon className='heartIcon' icon={faHeart} />
               </div>
               <div className='firstCorrectAns-content'>
-                <h1 className='points'>100</h1>
+                <h1 className='points'>{points}</h1>
                 <h5>Points</h5>
 
                 <button onClick={NextQuizHandler} className='firstCorrectAnsNext-btn' type="">Continue</button>
@@ -289,7 +315,7 @@ const StartGame = () => {
                 <FontAwesomeIcon className='heartIcon' icon={faHeart} />
               </div>
               <div className='firstCorrectAns-content'>
-                <h1 className='points'>100</h1>
+                <h1 className='points'>{points}</h1>
                 <h5>Points</h5>
 
                 <button onClick={gameOverHandler} className='firstCorrectAnsNext-btn' type="">Continue</button>
@@ -309,7 +335,7 @@ const StartGame = () => {
                     <h1 className='gameOver-title'>Game Over</h1>
 
                     <div className='gameOver-content'>
-                      <h1 className='points'>200</h1>
+                      <h1 className='points'>{points}</h1>
                       <h5 >Points</h5>
                       <h2>Amazing Well Played!! <img width={50} src={troffeImg} alt=""/></h2>
                       
