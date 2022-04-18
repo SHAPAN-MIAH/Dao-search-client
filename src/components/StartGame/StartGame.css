@@ -56,6 +56,17 @@ body {
   font-size: 50px;
   font-weight: 600;
 }
+.inCorrectResult h1, .secondInCorrectResult h1{
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.inCorrectResult p, .secondInCorrectResult p{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 500;
+}
 
 .closeGame{
   width: 50px;
@@ -106,7 +117,7 @@ body {
   border-radius: 30px;
   font-size: 14px;
   color: white;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .firstCorrectAnsNext-btn:hover, 
 .firstInCorrectAnsNext-btn:hover{

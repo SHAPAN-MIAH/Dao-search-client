@@ -56,7 +56,7 @@ const StartGame = () => {
     progressbar1.style.display = "none";
     progressbar2.style.display = "none";
     pts.style.display = "none";
-    inCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
+    inCorrectResult.innerHTML = "Incorrect!<br/>The mark for this question is <br/>  <h1>0</h1> <p>Points</p>"
     firstInCorrectAnsContainer.style.display = 'block'
 
     setPoints(0)
@@ -154,7 +154,7 @@ const StartGame = () => {
     progressbar2.style.display = "none";
     pts.style.display = "none";
     secondInCorrectAnsContainer.style.display = 'block'
-    secondInCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
+    secondInCorrectResult.innerHTML = "Incorrect!<br/>The mark for this question is <br/> <h1>0</h1> <p>Points</p>"
 
     // setPoints(0)
   }
@@ -198,7 +198,7 @@ const StartGame = () => {
   }
   
   window.addEventListener('load', () => {
-    createProgressbar('progressbar1', '20s', function() {
+    createProgressbar('progressbar1', '10s', function() {
       const GOptions = document.querySelector('.G-options')
       const gameTitle = document.querySelector('.gameTitle')
       const gameOptions = document.querySelector('.game-options-container')
@@ -216,7 +216,7 @@ const StartGame = () => {
       firstInCorrectAnsContainer.style.display = 'block'
     });
 
-    createProgressbar('progressbar2', '20s', function() {
+    createProgressbar('progressbar2', '10s', function() {
       const gameTitle = document.querySelector('.gameTitle')
       const gameNextOptionsContainer = document.querySelector('.game-nextOptions-container')
       const nextGameOptions1 = document.querySelector('.next_gameOptions1')
