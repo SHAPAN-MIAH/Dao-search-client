@@ -9,6 +9,10 @@ import Confetti from 'react-confetti'
 
 const StartGame = () => {
   const [points, setPoints] = useState('0')
+  const [points1, setPoints1] = useState('0')
+
+  const addPoint = parseInt(points) + parseInt(points1)
+
   console.log(points)
 
   const gameHandler = () => {
@@ -126,7 +130,7 @@ const StartGame = () => {
     progressbar2.style.display = "none";
     pts.style.display = "none";
 
-    setPoints(100)
+    setPoints1(100)
   }
   
   const nextGameHandler2  = () =>{
@@ -151,7 +155,8 @@ const StartGame = () => {
     pts.style.display = "none";
     secondInCorrectAnsContainer.style.display = 'block'
     secondInCorrectResult.innerHTML = "Incorrect!<br/>Your earn point is 0."
-    
+
+    // setPoints(0)
   }
 
   const SecondInCorrectNextQuizHandler = () => {
@@ -171,7 +176,7 @@ const StartGame = () => {
     secondCorrectAnsContainer.style.display = "none"
     gameOverContainer.style.display = "block"
 
-    setPoints(100 + 100)
+    // setPoints(100 + 100)
   }
 
   
@@ -315,7 +320,7 @@ const StartGame = () => {
                 <FontAwesomeIcon className='heartIcon' icon={faHeart} />
               </div>
               <div className='firstCorrectAns-content'>
-                <h1 className='points'>{points}</h1>
+                <h1 className='points'>{points1}</h1>
                 <h5>Points</h5>
 
                 <button onClick={gameOverHandler} className='firstCorrectAnsNext-btn' type="">Continue</button>
@@ -335,7 +340,7 @@ const StartGame = () => {
                     <h1 className='gameOver-title'>Game Over</h1>
 
                     <div className='gameOver-content'>
-                      <h1 className='points'>{points}</h1>
+                      <h1 className='points'>{addPoint}</h1>
                       <h5 >Points</h5>
                       <h2>Amazing Well Played!! <img width={50} src={troffeImg} alt=""/></h2>
                       
