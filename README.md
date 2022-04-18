@@ -5,4 +5,4 @@ Start Project...
 * npm install
 * npm start
 
-# Each src file name with the file description:
+# Each file name with the file description:
