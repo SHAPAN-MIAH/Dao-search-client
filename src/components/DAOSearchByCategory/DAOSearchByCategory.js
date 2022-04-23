@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DAOCategoryFilterItem from '../DAOCategoryFilterItem/DAOCategoryFilterItem';
@@ -30,16 +30,21 @@ const DAOSearchByCategory = () => {
     
   }
 
+  const [qry, setQry] = useState('');
+  console.log(qry)
+
   const HandleSearch = (e) => {
     setFilterData([])
 
-    const query = e.target.search.value;
+    // const RegExp = /[a-zA-Z \s?]+/gi;
+    const RegExp = /[A-Za-z+\s?]+/gi;
+    const query = e.target.search.value.match(RegExp);
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?Name=${query}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setSearchFilterData(data)
-    });
+      fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?Name=${query}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSearchFilterData(data)
+      });
 
     e.preventDefault()
   }
@@ -80,7 +85,7 @@ const DAOSearchByCategory = () => {
 
           <div>
             <form onSubmit={HandleSearch} className='category-searchInput-container d-flex'>
-              <input type="text" name='search' placeholder="Search by category" className="form-control shadow-none category-searchInput"  />
+              <input onChange={(e)=> setQry(e.target.value)} type="text" name='search' placeholder="Search by name" className="form-control shadow-none category-searchInput"  />
               <button  type="submit">Search</button>
             </form>
           </div>

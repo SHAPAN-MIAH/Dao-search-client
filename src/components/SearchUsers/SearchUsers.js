@@ -8,11 +8,11 @@ const SearchUsers = (props) => {
 
   const [userProfileData, setUserProfileData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("https://dry-cliffs-15181.herokuapp.com/userProfiles")
-  //   .then((res) => res.json())
-  //   .then((data) => setUserProfileData(data));
-  // }, []);
+  useEffect(() => {
+    fetch("https://dry-cliffs-15181.herokuapp.com/userProfiles")
+    .then((res) => res.json())
+    .then((data) => setUserProfileData(data));
+  }, []);
 
   
   return (
@@ -28,8 +28,8 @@ const SearchUsers = (props) => {
       </menu>
       <div className='userContent'>
         {
-          // searchData.length? searchData.map(user => <User key={user.id} user={user}></User>):userProfileData.map(user => <User key={user.id} user={user}></User>)
-          searchData.map(user => <User key={user.id} user={user}></User>)
+          searchData.length? searchData.map(user => <User key={user.id} user={user}></User>):userProfileData.map(user => <User key={user.id} user={user}></User>)
+          // searchData.map(user => <User key={user.id} user={user}></User>)
         }
       </div>
     </div>
