@@ -7,10 +7,6 @@ import './DAOSearchByCategory.css'
 // import axios from 'axios';
 
 const DAOSearchByCategory = () => {
-  const [filterData, setFilterData] = useState([]);
-  const [searchFilterData, setSearchFilterData] = useState([])
-
-
   // const handelAddAllCategoryDao = () => {
   //   axios.post(`http://localhost:5500/allCategoryDao`, AllCategoryDaoData)
   //   .then(res => {
@@ -19,9 +15,14 @@ const DAOSearchByCategory = () => {
   // }
 
 
+  const [filterData, setFilterData] = useState([]);
+  const [searchFilterData, setSearchFilterData] = useState([])
+  const [filter, setFilter] = useState("");
+
+
+  // Api call for category search
   const FilterDAO  = () => {
     setSearchFilterData([])
-
     const selectCategory = document.querySelector('.selectCategory');
 
     fetch(`https://dry-cliffs-15181.herokuapp.com/allCategoryDao?category=${selectCategory.value}`)
@@ -30,26 +31,22 @@ const DAOSearchByCategory = () => {
     
   }
 
-  const [qry, setQry] = useState('');
-  console.log(qry)
+
+  // Api call for search by query
+  const handleFilter = (event) => {
+    setFilter(event.target.value);
+  };
 
   const HandleSearch = (e) => {
+    e.preventDefault()
     setFilterData([])
 
-    // const RegExp = /[a-zA-Z \s?]+/gi;
-    const RegExp = /[A-Za-z+\s?]+/gi;
-    const query = e.target.search.value.match(RegExp);
-
-      fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?Name=${query}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setSearchFilterData(data)
-      });
-
-    e.preventDefault()
+    fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?search=` + filter)
+    .then((res) => res.json())
+    .then((data) => {
+      setSearchFilterData(data);
+    });
   }
-
-  
 
 
   return (
@@ -64,6 +61,7 @@ const DAOSearchByCategory = () => {
 
         {/* <button onClick={handelAddAllCategoryDao} type="">send</button> */}
 
+        {/* Select Category Start*/}
         <div className='d-flex'>
           <select onClick={()=>FilterDAO()} name="category" id="category" className='selectCategory'>
             <optgroup label="">
@@ -82,21 +80,27 @@ const DAOSearchByCategory = () => {
             </optgroup>
             
           </select>
+          {/* Select Category End*/}
 
+          {/* Input field for query search Start*/}
           <div>
             <form onSubmit={HandleSearch} className='category-searchInput-container d-flex'>
-              <input onChange={(e)=> setQry(e.target.value)} type="text" name='search' placeholder="Search by name" className="form-control shadow-none category-searchInput"  />
+              <input onChange={handleFilter} type="text" name='search' placeholder="Search by name" className="form-control shadow-none category-searchInput"  />
               <button  type="submit">Search</button>
             </form>
           </div>
         </div>
       </div>
+
+      {/* Category search data props pass in the child component*/}
       <div className='filter-results mt-5'>
         <h4 className='text-center'>Results</h4>
         {
           filterData.map(filterItem => <DAOCategoryFilterItem key={filterItem.id} filterItem={filterItem}></DAOCategoryFilterItem>)
         }
       </div>
+
+      {/* view query search data */}
       <div>
         {
           searchFilterData.map(searchItem => <div>
@@ -108,6 +112,7 @@ const DAOSearchByCategory = () => {
             </div>)
         }
       </div>
+
     </div>
   );
 };
