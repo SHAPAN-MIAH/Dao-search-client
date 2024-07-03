@@ -40,12 +40,13 @@ const DAOsocialGraphSearch = (props) => {
 
   const handleFilter = (event) => {
     setFilter(event.target.value);
+
   };
 
   const HandleSearch = (e) => {
     e.preventDefault()
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfile?search=` + filter)
+    fetch(`https://dao-search-server-dbex.vercel.app/userProfile?search=` + filter)
     .then((res) => res.json())
     .then((data) => {
       setSearchFilterData(data)

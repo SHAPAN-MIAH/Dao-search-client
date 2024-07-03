@@ -8,7 +8,7 @@ import './DAOSearchByCategory.css'
 
 const DAOSearchByCategory = () => {
   // const handelAddAllCategoryDao = () => {
-  //   axios.post(`http://localhost:5500/allCategoryDao`, AllCategoryDaoData)
+  //   axios.post(`https://dao-search-server-dbex.vercel.app//allCategoryDao`, AllCategoryDaoData)
   //   .then(res => {
   //     alert('data added successfully.')
   //   })
@@ -25,7 +25,7 @@ const DAOSearchByCategory = () => {
     setSearchFilterData([])
     const selectCategory = document.querySelector('.selectCategory');
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/allCategoryDao?category=${selectCategory.value}`)
+    fetch(`https://dao-search-server-dbex.vercel.app/allCategoryDao?category=${selectCategory.value}`)
     .then((res) => res.json())
     .then((data) => setFilterData(data));
     
@@ -41,7 +41,7 @@ const DAOSearchByCategory = () => {
     e.preventDefault()
     setFilterData([])
 
-    fetch(`https://dry-cliffs-15181.herokuapp.com/searchAllCategoryDaoByName?search=` + filter)
+    fetch(`https://dao-search-server-dbex.vercel.app/searchAllCategoryDaoByName?search=` + filter)
     .then((res) => res.json())
     .then((data) => {
       setSearchFilterData(data);

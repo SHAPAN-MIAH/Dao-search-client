@@ -7,7 +7,7 @@ const UserDetails = () => {
   const [userProfiles, setUserProfiles] = useState([]);
 
   useEffect(() => {
-    fetch(`https://dry-cliffs-15181.herokuapp.com/userProfiles/${id}`)
+    fetch(`https://dao-search-server-dbex.vercel.app/userProfiles/${id}`)
       .then((res) => res.json())
       .then((data) => setUserProfiles(data));
   }, []);

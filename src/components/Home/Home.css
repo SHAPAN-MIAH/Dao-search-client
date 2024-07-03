@@ -4,12 +4,15 @@
 }
 .search-container{
   display: flex;
+  width: 700px;
+  position: relative;
+  margin: auto;
 }
 .title{
   color: rgb(24 15 119);
 }
 .searchInput{
-  width: 650px;
+  width: 100%;
   margin: auto;
   position: relative;
   padding: 14px 20px;
@@ -18,7 +21,7 @@
 }
 .search-container button{
   position: absolute;
-  margin-left: 835px;
+  right: 0px;
   background-color: rgb(24 15 119);
   border: 1px solid rgb(24 15 119);
   padding: 14px 40px;
@@ -52,4 +55,11 @@
 }
 .blockchainImg img{
   border-radius: 5px;
+}
+
+
+@media screen and (max-width:1400px) {
+  .search-container{
+    width: 80%;
+  }
 }
